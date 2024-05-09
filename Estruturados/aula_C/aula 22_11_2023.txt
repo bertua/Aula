@@ -1,0 +1,248 @@
+
+#include <stdio.h>
+
+int main() {
+    int num, numa, nums;
+    printf("Digite um numero: ");
+    scanf("%i", &num);
+    numa = num -1;
+    nums = num +1;
+    printf("Numero sucessor: %i\n", nums);
+    printf("Numero antecessor: %i", numa);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    float real, dolar, total;
+    printf("Valor na carteira: ");
+    scanf("%f",&real);
+    dolar = 4.90;
+    total = real/dolar;
+    printf("Pode comprar %f dolar(es))", total);
+    return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int segundos;
+    float horas, minutos;
+    printf("Digite o tempo: ");
+    scanf("%i",&segundos);
+    horas = segundos/3600;
+    minutos = segundos/60;
+    printf("Duraçao em horas: %f",horas);
+    printf("Duraçao em horas: %f",minutos);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3, maior;
+    printf("Digite tres numeros: ");
+    scanf("%i",&num1);
+    scanf("%i",&num2);
+    scanf("%i",&num3);
+    if(num1 > num2 && num1 > num3){
+        maior = num1;
+    } else if(num2 > num1 && num2 > num3){
+        maior = num2;
+    } else {
+        maior = num3;
+    }
+    printf("O maior numero é: %i", maior);
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int preco, promo;
+    printf("Digite o preco do produto: ");
+    scanf("%i",&preco);
+    promo = preco - (preco * 0.05);
+    printf("O valor com desconto é de: %i", promo);
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    float km, dias, precokm, precodia, precoTotKm, precoTotDia, precoTotal;
+    printf("Kilometros precorridos: ");
+    scanf("%f",&km);
+    printf("Dias alugados: ");
+    scanf("%f",&dias);
+    precokm = 0.20;
+    precodia = 90;
+    precoTotKm = precokm * km;
+    precoTotDia = precodia * dias;
+    precoTotal = precoTotKm + precoTotDia;
+    printf("O valor total é: %f", precoTotal);
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    float custof, custoc, dist, impost;
+    printf("Preco fabricacao: ");
+    scanf("%f",&custof);
+    dist = custof * 1.28;
+    impost = custof * 1.45;
+    custoc = dist + impost;
+    printf("Preco carro novo: %f", custoc);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    printf("Digite dois numeros: ");
+    scanf("%i",&num1);
+    scanf("%i",&num2);
+    if(num1 > num2){
+        printf("O primeiro valor é o maior ");
+    } else if (num1 < num2){
+        printf("O segundo valor é o maior ");
+    } else {
+        printf("Não existe valor maior, os dois são iguais");
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int idade;
+    printf("Digite sua idade: ");
+    scanf("%i",&idade);
+    printf("Sua categoria é: ");
+    if(idade >= 5 && idade <= 7){
+        printf("infantil A");
+    } else if(idade >= 8  && idade <= 10){
+        printf("infantil B");
+    } else if(idade >= 11 && idade <= 13){
+        printf("juvenil A");
+    } else if(idade >= 14 && idade <= 17){
+        printf("juvenil B");
+    } else if(idade >= 18){
+        printf("adulto");
+    }
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    float nota1, nota2, nota3, media;
+    printf("Digite as tres notas: ");
+    scanf("%f",&nota1);
+    scanf("%f",&nota2);
+    scanf("%f",&nota3);
+    media = (nota1 + nota2 + nota3)/3;
+    printf("Sua media é: %f\n", media);
+    if(media >= 7){
+        printf("Aprovado");
+    } else {
+        printf("Reprovado");
+    }
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    char codigo[30];
+    float nota1, nota2, nota3, media, maiorn, n2, n3;
+    printf("Codigo do aluno: ");
+    scanf("%s",&codigo);
+    printf("Digite as tres notas: ");
+    scanf("%f",&nota1);
+    scanf("%f",&nota2);
+    scanf("%f",&nota3);
+    if(nota1 >= nota2 && nota1 >= nota3){
+        maiorn = nota1;
+        n2 = nota2;
+        n3 = nota3;
+    } else if(nota2 >= nota1 && nota2 >= nota3){
+        n2 = nota1;
+        maiorn = nota2;
+        n3 = nota3;
+    } else if(nota3 >= nota1 && nota3 >= nota2){
+        n2 = nota1;
+        n3 = nota2;
+        maiorn = nota3;
+    }
+    media = ((maiorn * 4) + (n2 * 3) + (n3 * 3))/(4+3+3);
+    printf("Sua media é: %f\n", media);
+    if(media >= 5){
+        printf("Aprovado");
+    } else {
+        printf("Reprovado");
+    }
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    char sexo[30];
+    float pesoIdeal, altura;
+    printf("Seu sexo: ");
+    scanf("%s",&sexo);
+    printf("Sua altura: ");
+    scanf("%f",&altura);
+    
+    if (strcmp(sexo,"m") == 0){
+        pesoIdeal = (72.7*altura)-58;
+    } else if(strcmp(sexo,"f") == 0){
+        pesoIdeal = (62.1*altura)-44.7;
+    }
+    
+    printf("Seu peso ideal é: %f",pesoIdeal);
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    float comp, larg, area;
+    printf("Comprimento do terreno: ");
+    scanf("%f",&comp);
+    printf("Largura do terreno: ");
+    scanf("%f",&larg);
+    area = comp * larg;
+    printf("A area do terreno é: %f\n", area);
+    if(area < 100){
+        printf("TERRENO POPULAR ");
+    } else if(area > 99 && area < 501){
+        printf("TERRENO MASTER");
+    } else if(area > 500){
+        printf("TERRENO VIP");
+    }
+    return 0;
+}

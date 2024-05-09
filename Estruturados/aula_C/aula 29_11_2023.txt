@@ -1,0 +1,128 @@
+#include <stdio.h>
+
+int main() {
+    int codigo, quantidade;
+    float preco, valorApagar;
+    
+    printf("\nCachorro quente 100 1,20");
+    printf("\nBauru simples 101 1,30");
+    printf("\nBauru com ovo 102 1,50");
+    printf("\nHambúrguer 103 1,20");
+    printf("\nCheeseburguer 104 1,30");
+    printf("\nRefrigerante 105 1,00");
+    printf("\nDigite o código: ");
+    scanf("%i",&codigo);
+    printf("\nDigite a quantidade: ");
+    scanf("%i",&quantidade);
+    if(codigo == 100){
+        valorApagar = (1.20 * quantidade);
+        printf("\nO valor a pagar é: %f",valorApagar);
+    }else if(codigo == 101){
+        valorApagar = (1.30 * quantidade);
+        printf("\nO valor a pagar é: %f",valorApagar);
+    }else if(codigo == 102){
+        valorApagar = (1.50 * quantidade);
+        printf("\nO valor a pagar é: %f",valorApagar);
+    }else if(codigo == 103){
+        valorApagar = (1.20 * quantidade);
+        printf("\nO valor a pagar é: %f",valorApagar);
+    }else if(codigo == 104){
+        valorApagar = (1.30 * quantidade);
+        printf("\nO valor a pagar é: %f",valorApagar);
+    }else if(codigo == 105){
+        valorApagar = (1.00 * quantidade);
+        printf("\nO valor a pagar é: %f",valorApagar);
+    }
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    float velocidade, multa;
+    printf("Digite a velocidade: ");
+    scanf("%f",&velocidade);
+    if(velocidade > 80){
+        multa = velocidade * 5;
+        printf("\nMulta concedida!");
+        printf("\nMulta a pagar: %f",multa);
+    } else {
+        printf("\nO veículo está dentro dos parâmentros.");
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int anoNasc, calculoAno, faltaPosAno;
+    printf("Digite o ano de nascimento: ");
+    scanf("%i",&anoNasc);
+    calculoAno = 2023 - anoNasc;
+    if(calculoAno < 18){
+        faltaPosAno = 18 - calculoAno;
+        printf("Ainda falta %i anos para o alistamento.",faltaPosAno);
+    }else if(calculoAno > 18){
+        faltaPosAno = calculoAno - 18;
+        printf("Já se passou %i anos para o alistamento.",faltaPosAno);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    float pes, polegadas, jardas, milhas;
+    printf("Digite a medida em pés: ");
+    scanf("%f",&pes);
+    polegadas = pes * 12;
+    jardas = pes / 3;
+    milhas = jardas / 1760;
+    printf("\nPés: %f",pes);
+    printf("\nPolegadas: %f",polegadas);
+    printf("\nJardas: %f",jardas);
+    printf("\nMilhas: %f",milhas);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    float salMin, horasTrab, numDep, horasExt, valorHoraTrab, salMes, valorDep, valorHoraExt, salHoraExt, salBruto, imposto, salLiq, salFun, grat;
+    printf("Valor do salario minimo: ");
+    scanf("%f",&salMin);
+    printf("Horas trabalhadas: ");
+    scanf("%f",&horasTrab);
+    printf("Numero de dependentes: ");
+    scanf("%f",&numDep);
+    printf("Horas extras trabalhadas: ");
+    scanf("%f",&horasExt);
+    valorHoraTrab = salMin / 50;
+    salMes = horasTrab * valorHoraTrab;
+    valorDep = numDep * 32;
+    valorHoraExt = valorHoraTrab * 1.5;
+    salHoraExt= valorHoraExt * horasExt;
+    salBruto = salMes + valorDep + salHoraExt;
+    if(salBruto < 200){
+        imposto = 0;
+    } else if(salBruto >= 200 && salBruto <= 500){
+        imposto = salBruto * 0.1;
+    } else if(salBruto > 500){
+        imposto = salBruto * 0.2;
+    }
+    salLiq = salBruto - imposto;
+    if(salLiq <= 350){
+        grat = 100;
+    } else if(salLiq > 350){
+        grat = 50;
+    }
+    salFun = salLiq + grat;
+    printf("Salario do funcionario: %f", salFun);
+    
+    
+    return 0;
+}
