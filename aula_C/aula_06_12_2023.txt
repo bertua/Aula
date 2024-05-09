@@ -1,0 +1,85 @@
+#include <stdio.h>
+
+int main(){
+    int num, soma;
+    for(int i=1; i<=10; i++){
+    printf("Digite um numero: ");
+    scanf("%i",&num);
+    if(num % 2 != 0){
+        soma++;
+    }
+    }
+    printf("Foram %i numeros impares", soma);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main(){
+    int num, soma;
+    int i =0;
+    while(soma < 500){
+        printf("Digite um numero: ");
+        scanf("%i",&num);
+        soma += num;
+        i++;
+    }
+    printf("Foram %i digitos", i);
+    return 0;
+}
+
+
+
+#include <stdio.h>
+void oi(){
+        char texto[] = "Sou uma function \n";
+        printf("%s", texto);
+    }
+    
+int soma(int a, int b){
+    int resultado;
+    resultado = a + b;
+    return resultado;
+}
+
+int diminuir(int a, int b){
+    return a-b;
+}
+
+int multiplicar(int a, int b){
+    return a * b;
+}
+
+int dividir(int a, int b){
+    if(b != 0){
+        return a / b;
+    } else {
+        return 0;
+    }
+    
+}
+
+int main(){
+    oi();
+    int total = soma(5,7);
+    printf("%i \n", total);
+    int v1, v2;
+    printf("Digite valor: ");
+    scanf("%i",&v1);
+    printf("Digite valor: ");
+    scanf("%i",&v2);
+    total = soma(v1,v2);
+    printf("%i \n", total);
+    total = diminuir(v1,v2);
+    printf("%i \n", total);
+    total = multiplicar(v1,v2);
+    printf("%i \n", total);
+    total = dividir(v1,v2);
+    printf("%i \n", total);
+    
+    
+    
+    
+    return 0;
+}
+
