@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styleLanding.css">
+    <title>Consultoria</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#hero" class="logo">Consultoria</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#servico">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.getElementById("hamburger-menu");
+        const navLinks = document.querySelector(".nav-links");
+    
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
+    <section class="hero" id="hero">
+        <div>
+            <h1>Transforme sua Startup com Consultoria Estratégica!</h1>
+            <p>Ajudamos sua startup a crescer, escalar e alcançar o sucesso com soluções práticas e personalizadas.</p>
+            <a href="#contato" class="cta-button">Solicite sua Consultoria Gratuita</a>
+        </div>
+    </section>
+
+    <section class="servico" id="servico">
+        <h2>Nossos Serviços</h2>
+        <div class="servico-item">
+            <h3>Planejamento de Negócios</h3>
+            <p>Auxiliamos sua startup a definir estratégias eficazes e escaláveis</p>
+            <a href="">Saiba Mais</a>
+        </div>
+        <div class="servico-item">
+            <h3>Gestão Financeira</h3>
+            <p>Consultoria em gestão de fluxo de caixa, captação de investimentos e controle de custos</p>
+            <a href="">Saiba Mais</a>
+        </div>
+        <div class="servico-item">
+            <h3>Marketing Digital e Crescimento</h3>
+            <p>Estratégias de marketing para atrair e reter clientes de forma eficiente</p>
+            <a href="">Saiba Mais</a>
+        </div>
+        <div class="servico-item">
+            <h3>Mentoria e Desenvolvimento de Equipe</h3>
+            <p>Ajudamos a fortalecer sua equipe com treinamentos e mentorias especializadas</p>
+            <a href="">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <h2>Quem Somos</h2>
+        <p>A consultoria é formada por um time de especialistas com experiência em ajudar
+             startups a superar desafios comuns, como falta de planejamento estratégico, gestão financeira ineficiente e dificuldades de marketing.
+        </p>
+        <p>Com mais de 10 anos de experiência no mercado, nossa missão é apoiar startups a desenvolverem seu potencial e se destacarem no competitivo cenário atual.</p>
+        <img src="images/equipe.webp">
+    </section>
+
+    <section class="galeria" id="galeria">
+        <h2>Veja Nosso Trabalho em Ação</h2>
+        <div class="galeria-container">
+            <img src="images/10_passos_projeto_de_consultoria_empresarial.jpg" class="galeria-item">
+            <img src="images/consultoria.jpg" class="galeria-item">
+            <img src="images/empresa-de-consultoria-empresarial.jpg" class="galeria-item">
+        </div>
+    </section>
+
+    <section class="depoimentos" id="depoimentos">
+        <h2>O que Nossos Clientes Dizem</h2>
+
+        <div class="depoimentos-item">
+            <img src="images/perfil1.jpg" class="depoimentos-img">
+            <p>"Graças à consultoria, conseguimos estruturar melhor nosso planejamento financeiro e levantar investimentos. Ajudou a acelerar nosso crescimento."</p>
+            <span>João Silva, CEO da Startup XYZ</span>
+        </div>
+
+        <div class="depoimentos-item">
+            <img src="images/perfil2.webp" class="depoimentos-img">
+            <p>"As estratégias de marketing sugeridas transformaram nossa abordagem no mercado. Hoje, temos uma base de clientes muito mais engajada."</p>
+            <span>Marcos Oliveira, Fundadora da Startup ABC</span>
+        </div>
+
+        <div class="depoimentos-item">
+            <img src="images/perfil3.jpg" class="depoimentos-img">
+            <p>"A consultoria ajudou nossa equipe a se alinhar, redefinir processos e entregar resultados muito mais eficientes."</p>
+            <span>Carlos Almeida, COO da Startup 123</span>
+        </div>
+
+    </section>
+
+    <section class="contato" id="contato">
+        <h2>Entre em Contato</h2>
+        <form id="contato-form">
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="company" placeholder="Empresa">
+            <textarea name="message" placeholder="Mensagem" required></textarea>
+            <button type="submit">Envie sua Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Consultoria. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://instagram.com">Instagram</a>
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+        </div>
+    </footer>
+    
+</body>
+</html>

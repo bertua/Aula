@@ -1,0 +1,56 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+  
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color: red;
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+}
+
+.bloco {
+    min-width: 200px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.bloco1 {
+    background-color: #FF5733;
+    border: 5px solid #C70039;
+}
+
+.bloco2 {
+    background-color: #33FF57;
+    border: 5px solid #28A745;
+}
+
+.bloco3 {
+    background-color: #3357FF;
+    border: 5px solid #0066CC;
+}
+
+@media screen and (max-width:768px){
+    body{
+        background-color: black;
+    }
+    .container{
+        display:initial;
+    }
+    .bloco {
+       max-width: initial;
+        margin-bottom: 20px;
+    }
+}

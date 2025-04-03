@@ -1,0 +1,369 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    transition: top 0.3s ease-in-out; /* Smooth header transition */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Smooth menu transition */
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+.nav-links a:hover {
+    color: #ff6f61;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Hero Section Styling */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding-top: 60px; /* Offset for fixed header */
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Hero fade-in animation */
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.cta-button:hover {
+    background-color: #ff3b2d;
+}
+
+/* Services Section */
+.servico {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeIn 2s forwards 0.5s; /* Animation for the Services section */
+}
+
+.servico h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.servico-item {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.servico-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.servico-item p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.servico-item a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.servico-item:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* About Section */
+.sobre {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    animation: fadeIn 2s forwards 1s; /* Animation for About section */
+}
+
+.sobre h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sobre img {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1.5s; /* Animation for image */
+}
+
+.galeria-item{
+    width: 620px;
+    height: 400px;
+    margin-left: 10px;
+}
+
+/* Testimonials Section */
+.depoimentos {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeIn 2s forwards 2s; /* Animation for Testimonials section */
+}
+
+.depoimentos h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.depoimentos-item {
+    margin-bottom: 40px;
+}
+
+.depoimentos-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.depoimentos-item p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.depoimentos-item span {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Contact Section */
+.contato {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    animation: fadeIn 2s forwards 2.5s; /* Animation for Contact section */
+}
+
+.contato h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 2s forwards 3s; /* Form fade-in animation */
+}
+
+.contato input,
+.contato textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contato button {
+    padding: 10px 30px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.contato button:hover {
+    background-color: #ff3b2d;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+footer .social-links a:hover {
+    color: #ff6f61;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Navbar Links */
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Services Section */
+    .servico h2 {
+        font-size: 28px;
+    }
+
+    .servico-item h3 {
+        font-size: 20px;
+    }
+
+    /* Testimonials Section */
+    .depoimentos h2 {
+        font-size: 28px;
+    }
+
+    /* Contact Section */
+    .contato h2 {
+        font-size: 28px;
+    }
+
+    .contato input,
+    .contato textarea {
+        width: 90%;
+    }
+
+    /* Service Items - Display as list on mobile */
+    .servico-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

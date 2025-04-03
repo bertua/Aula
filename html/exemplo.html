@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hambúrguer</title>
+    <style>
+
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    padding: 0;
+}
+
+.bar {
+    background-color: #333;
+    height: 5px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 200px;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #ff6347;
+}
+
+    </style>
+</head>
+<body>
+
+    <button class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <nav id="menu" class="menu">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            // Alterna a visibilidade do menu
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+
+    </script>
+</body>
+</html>

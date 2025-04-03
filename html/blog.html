@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleBlog.css">
+    <title>Blog sobre Ursos</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Blog dos Ursos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#posts">Posts</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Descubra o mundo dos ursos</h2>
+            <p>Curiosidades, habitat e muito mais.</p>
+            <a href="#posts" class="btn">Ver Posts Recentes</a>
+        </div>
+    </section>
+
+    <!-- Posts Recentes -->
+    <section id="posts" class="posts">
+        <h2>Posts Recentes</h2>
+        <div class="post-card">
+            <img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg" alt="Urso Pardo">
+            <h3>Urso Pardo: Características e Curiosidades</h3>
+            <p>O urso pardo é uma das espécies mais conhecidas e fascinantes. Neste post, exploramos suas principais características...</p>
+        </div>
+        <div class="post-card">
+            <img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg" alt="Urso Pardo">
+            <h3>Onde vivem os ursos?</h3>
+            <p>Os ursos habitam diversas regiões do planeta. Descubra os países onde eles têm maior presença...</p>
+        </div>
+        <div class="post-card">
+            <img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg" alt="Urso Pardo">
+            <h3>Curiosidades sobre os Ursos</h3>
+            <p>Você sabia que os ursos podem correr até 50 km/h? Aprenda mais sobre esses animais incríveis!</p>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre">
+        <h2>Sobre o Autor</h2>
+        <p>Sou um apaixonado por animais, especialmente ursos! Criei este blog para compartilhar meu conhecimento e amor por esses incríveis seres da natureza.</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form action="#">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Todos os direitos reservados. | Blog sobre ursos</p>
+        <p>Feito com ❤️ por Jailson Mendes</p>
+    </footer>
+
+    <script>
+        // Função para alternar entre modo escuro e claro
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            const modeButton = document.getElementById("darkModeToggle");
+            if (document.body.classList.contains("dark-mode")) {
+                modeButton.textContent = "🌞";  // Modo claro
+            } else {
+                modeButton.textContent = "🌙";  // Modo escuro
+            }
+        }
+    </script>
+
+</body>
+</html>
