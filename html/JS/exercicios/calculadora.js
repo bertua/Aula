@@ -4,6 +4,7 @@ const display = document.getElementById("display");
 let a = '';
 let b = '';
 let operacao = '';
+let ultimaResposta = '';
 
 function atualizarDisplay() {
     display.value = a + ' ' + operacao + ' ' + b;
@@ -25,29 +26,62 @@ buttons.forEach(button => {
             atualizarDisplay();
         } else if (button.value === '=') {
             calcular();
+        } else if (button.value === 'C') {
+            a = '';
+            b = '';
+            operacao = '';
+            atualizarDisplay();
+        } else if (button.value === 'Er') {
+            if (b !== '') {
+                b = b.slice(0, -1);
+            } else if (operacao !== '') {
+                operacao = '';
+            } else {
+                a = a.slice(0, -1);
+            }
+            atualizarDisplay();
+        } else if (button.value === 'Ans') {
+            if (ultimaResposta !== '') {
+                a = ultimaResposta;
+                b = ''; 
+                operacao = '';
+                atualizarDisplay();
+            }
         }
     });
 });
 
 
 
-function calcular(){
+function calcular() {
     let r;
-    switch(operacao){
+    const numA = parseFloat(a);
+    const numB = parseFloat(b);
+
+    switch(operacao) {
         case "+":
-            r=a+b;
+            r = numA + numB;
+            break;
         case "-":
-            r=a-b;
+            r = numA - numB;
+            break;
         case "x":
-            r=a*b;
+            r = numA * numB;
+            break;
         case "/":
-            if(b == 0){
-                r="ERROR";
+            if (numB === 0) {
+                r = "ERROR";
             } else {
-                r=a/b;
+                r = numA / numB;
             }
+            break;
+        default:
+            r = "ERROR";
     }
 
     display.value = r;
-    a, b, operacao = '';
+    ultimaResposta = r.toString();
+    a = ultimaResposta;
+    b = '';
+    operacao = '';
 }

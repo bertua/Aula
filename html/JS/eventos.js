@@ -4,7 +4,7 @@ botao.addEventListener("click",() => {
     const campoNome = document.getElementById("nome");
     const campoEmail = document.getElementById("email");
     const div = document.getElementById("alterar");
-    const nome = campoEmail.value;
+    const nome = campoNome.value;
     const email = campoEmail.value;
     
     if(nome.trim() === "" || email.trim() === ""){
